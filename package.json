@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "n8n community node for Tribe CRM – manage persons, organizations, contacts, leads, sales opportunities, tasks, appointments, invoices, and webhooks in automated workflows.",
 	"license": "MIT",
-	"homepage": "https://github.com/jnorsa-efficy/n8n-nodes-tribecrm",
+	"homepage": "https://github.com/efficy-sa/n8n-nodes-tribecrm",
 	"keywords": [
 		"n8n-community-node-package"
 	],
@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/jnorsa-efficy/n8n-nodes-tribecrm.git"
+		"url": "https://github.com/efficy-sa/n8n-nodes-tribecrm.git"
 	},
 	"scripts": {
 		"build": "tsc && node -e \"const fs=require('fs');fs.mkdirSync('dist/icons',{recursive:true});fs.copyFileSync('icons/tribecrm.svg','dist/icons/tribecrm.svg');\"",

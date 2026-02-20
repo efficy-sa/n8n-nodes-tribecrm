@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class TribeCrmOAuth2Api implements ICredentialType {
 	name = 'tribeCrmOAuth2Api';
@@ -13,6 +13,14 @@ export class TribeCrmOAuth2Api implements ICredentialType {
 		light: 'file:../icons/tribecrm.svg',
 		dark: 'file:../icons/tribecrm.svg',
 	} as const;
+
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: '={{$credentials.apiUrl}}/v1/odata',
+			url: '/Employee',
+			qs: { $top: '1' },
+		},
+	};
 
 	properties: INodeProperties[] = [
 		{

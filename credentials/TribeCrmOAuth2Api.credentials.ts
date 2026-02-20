@@ -42,7 +42,7 @@ export class TribeCrmOAuth2Api implements ICredentialType {
 			displayName: 'Scope',
 			name: 'scope',
 			type: 'hidden',
-			default: 'read write offline',
+			default: 'read write',
 		},
 		{
 			displayName: 'Auth URI Query Parameters',

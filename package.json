@@ -1,0 +1,47 @@
+{
+	"name": "n8n-nodes-tribecrm",
+	"version": "0.1.0",
+	"description": "n8n community node for Tribe CRM – manage persons, organizations, contacts, leads, sales opportunities, tasks, appointments, invoices, and webhooks in automated workflows.",
+	"license": "MIT",
+	"homepage": "https://github.com/jnorsa-efficy/n8n-nodes-tribecrm",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"author": {
+		"name": "",
+		"email": ""
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jnorsa-efficy/n8n-nodes-tribecrm.git"
+	},
+	"scripts": {
+		"build": "tsc && node -e \"const fs=require('fs');fs.mkdirSync('dist/icons',{recursive:true});fs.copyFileSync('icons/tribecrm.svg','dist/icons/tribecrm.svg');\"",
+		"dev": "tsc --watch",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"prepublishOnly": "npm run build"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/TribeCrmOAuth2Api.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/TribeCrm/TribeCrm.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

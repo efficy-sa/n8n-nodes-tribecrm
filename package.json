@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-tribecrm",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "n8n community node for Tribe CRM – manage persons, organizations, contacts, leads, sales opportunities, tasks, appointments, and invoices in automated workflows.",
 	"license": "MIT",
 	"homepage": "https://github.com/efficy-sa/n8n-nodes-tribecrm",
